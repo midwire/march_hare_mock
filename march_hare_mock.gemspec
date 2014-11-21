@@ -8,10 +8,12 @@ Gem::Specification.new do |spec|
   spec.version       = MarchHareMock::VERSION
   spec.authors       = ['Chris Blackburn']
   spec.email         = ['chris@midwiretech.com']
-  spec.summary       = %q{MarchHare/RabbitMQ mock class in JRuby. Useful for mocking MarchHare usage in test code.}
+  spec.summary       = 'MarchHare/RabbitMQ mock class in JRuby. Useful for
+    mocking MarchHare usage in test code.'
   spec.description   = spec.summary
   spec.homepage      = ''
   spec.license       = 'MIT'
+  spec.platform      = 'java'
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
@@ -20,4 +22,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 1.7'
   spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'midwire_common', '~> 0.1.11'
+  spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'rspec', '~> 3.1'
 end
